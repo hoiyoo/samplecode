@@ -1,0 +1,32 @@
+@import url(SimpleSrmApp.css);
+
+div.clear {
+	clear:both;
+	width:0px;
+	height:0px;
+}
+
+.klinklogin h2 {
+	font-size: 1em;
+	font-family: Verdana, Helvetica, Arial, Sans-serif;
+	font-weight: bold;
+	color: #4D85D3;
+}
+p, div, span {
+	font-size: 1em;
+	font-family: Verdana, Helvetica, Arial, Sans-serif;
+	color: #333333;
+}
+th {
+	font-size: 1em;
+	font-family: Arial, Sans-serif;
+	font-weight: bold;
+	color: #333333;
+}
+td {
+	font-size: 1em;
+	font-family: Arial, Sans-serif;
+	font-weight: normal;
+	color: #333333;
+}
+

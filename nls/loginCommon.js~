@@ -1,0 +1,7 @@
+// n.b.: Values in index.html override (and overwrite) values for the current language
+define({
+	root: ({
+		welcomemsg : "Welcome !  gives to access to all your important stuff"
+		})
+	/* no other languages, yet */
+});

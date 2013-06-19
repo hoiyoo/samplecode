@@ -1,0 +1,113 @@
+
+/* presentation with a translucent border */
+table.glass {
+	width: 100%;
+	border: none;
+	margin:0;
+	padding:0;
+	border-collapse: collapse;
+	font-family: Arial;
+}
+table.glass td.glass {
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+	border-style: none;
+	background: rgb(255, 255, 255); 
+	position: relative;
+	font-size: 1em;
+}
+table.glass td.glass.ul, table.glass td.glass.ur, table.glass td.glass.ll, table.glass td.glass.lr {
+	background: transparent;
+}
+td.glass {
+	opacity: .48;
+	filter:alpha(opacity=48);
+}
+	
+table.glass td.glass.ul {
+	width: 10px;
+	height: 10px;
+	background-image: url(images/glass_circle_10.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	background: 	transparent;
+}
+table.glass td.glass.um {
+	height: 10px;
+}
+table.glass td.glass.ur {
+	width: 10px;
+	height: 10px;
+	background-image: url(images/glass_circle_10.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+	background: transparent;
+}
+table.glass td.glass.lt, table.glass td.glass.rt {
+	width: 10px;
+}
+table.glass td.glass.content, table.glass td.glass.content > div {
+	padding: 0px;
+	margin: 0px;
+	background:white;
+	opacity: 1.0;
+	filter:alpha(opacity=100);
+}
+table.glass td.glass.ll {
+	width: 10px;
+	height: 10px;
+	background-image: url(images/glass_circle_10.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background: 	transparent;
+}
+table.glass td.glass.lm {
+	height: 10px;
+}
+table.glass td.glass.lr {
+	width: 10px;
+	height: 10px;
+	background-image: url(images/glass_circle_10.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background: 	transparent;
+}
+
+/* TAB HACK */
+h2.tabcontainer {
+	position: relative;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	margin-right: 0;
+	margin-left: 0;
+	border-bottom: 1px solid #b3b3b3;
+}
+.hacktabopen {
+	position: relative;
+	top: 1px;
+	color: inherit;
+	border-top: 1px solid #b3b3b3;
+	border-left: 1px solid #b3b3b3;
+	border-right: 1px solid #b3b3b3;
+	border-bottom: 1px solid #F7FAFC;
+	padding: 3px .5em 3px .5em;
+	margin: 0 .25em;
+}
+.hacktabclosed {
+	position: relative;
+	top: 1px;
+	color: #b3b3b3;
+	border-top: 1px solid #b3b3b3;
+	border-left: 1px solid #b3b3b3;
+	border-right: 1px solid #b3b3b3;
+	border-bottom: 1px solid #b3b3b3;
+	padding: 3px .5em 3px .5em;
+	margin: 0 .25em;
+	background: #E2E2E2 url(/mum/js/bluedojo/dijit/themes/tundra/images/tabEnabled.png) repeat-x scroll 0 0;
+	cursor: pointer;
+}
+
+.hacktabclosed.hover {
+	background-image: url(/mum/js/bluedojo/dijit/themes/tundra/images/tabHover.png)
+}
