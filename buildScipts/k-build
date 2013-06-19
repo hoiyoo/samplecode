@@ -1,0 +1,58 @@
+#!/bin/bash
+#set -x
+set -e
+source "$(dirname -- "$0")/k-config.sh"
+version=$(k-version --increment)
+
+tmpfile="/tmp/$myname-$$"
+
+while [ $# -gt 0 ]; do
+  case "$1" in
+	--profile=*)
+		profile="${1#--profile=}"
+	  shift
+		;;
+	*)
+	  echo "I don't know what this option is: \"$1\"" 1>&2
+		exit 2
+	esac
+done
+
+if [ -z "$profile" ]; then
+  echo "I need a profile" 1>&2
+	exit 2
+fi
+
+if [ "$profile" == "prod" ]; then
+  suffix=
+else
+  suffix="-$profile"
+fi
+echo "Building version $version$suffix"
+
+node_version="$(node -v)"
+if [ "$node_version" != "$KLINK_BUILD_NODE_VERSION" ]; then
+  echo "$myname: wrong version of \"node\" ($node_version); must be \"$KLINK_BUILD_NODE_VERSION\"" 1>&2
+	exit 1
+fi
+
+cd $KLINK_GIT_WEBAPP
+rm -fr server/release
+cd ./server/public/js/util/buildscripts
+#cmd="./build.sh --bin node --htmlFiles ../../../index.html --profile klink-$profile --action release"
+cmd="./build.sh --bin node --profile klink-$profile --action release"
+echo "$cmd"
+rm -f /tmp/build_summary_error.dat
+( $cmd 2>&1 || echo "$?" > /tmp/build_summary_error.dat ) | tee /tmp/build_summary_with_bogons.log | grep -vf build_bogons.txt
+if [ -f /tmp/build_summary_error.dat ]; then
+  echo "*** BUILD FAILED"
+  exit 1
+fi
+if ./klink-messages $profile ; then
+  ./klink-delete-junk $profile
+  k-hash-replace "$version$suffix" < $KLINK_GIT_WEBAPP/server/public/index.html > $KLINK_GIT_WEBAPP/builds/$profile/index.html
+	k-version --increment > /dev/null
+	echo "Build complete; version $version$suffix"
+else
+  echo "*** BUILD FAILED"
+fi

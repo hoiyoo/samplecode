@@ -1,0 +1,23 @@
+<div class="dijitDialog klinkDialog" role="dialog" aria-labelledby="${id}_title">
+	<div data-dojo-attach-point="titleBar" class="dijitDialogTitleBar"
+		><div data-dojo-attach-point="iconNode" class="klinkDialogIcon"></div
+		><span data-dojo-attach-point="titleNode" class="dijitDialogTitle" id="${id}_title"
+				role="header" level="1"></span
+		><div data-dojo-attach-point="closeButtonNode" class="dijitDialogCloseIcon" data-dojo-attach-event="ondijitclick: onCancel" title="${cancelButtonText}" role="button" tabIndex="99"
+		><span data-dojo-attach-point="closeText" class="closeText" title="${cancelButtonText}">x</span
+		></div>
+	</div>
+	<div data-dojo-attach-point="focusNode">
+		<div data-dojo-attach-point="containerNode" class="dijitDialogPaneContent"></div>
+		<div data-dojo-attach-point="actionBar" class="dijitDialogPaneActionBar">
+			<div class="klinkTwoColumns">
+				<div class="klinkLeftColumn"
+					><button data-dojo-type="dijit/form/Button" class="klinkButton btnGreen klinkDialogCancelButton" data-dojo-attach-point="cancelButton" data-dojo-attach-event="onClick: onClickCancel" tabIndex="2">${cancelButtonText}</button
+				></div>
+				<div class="klinkRightColumn"
+					><button data-dojo-type="dijit/form/Button" class="klinkButton klinkButtonPrimary klinkDialogOKButton" data-dojo-attach-point="okButton" data-dojo-attach-event="onClick: onClickOK" tabIndex="1">${okButtonText}</button
+				></div>
+			</div>
+		</div>
+	</div>
+</div>
