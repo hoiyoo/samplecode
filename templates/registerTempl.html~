@@ -1,0 +1,122 @@
+<div id="gdlContentBox" class="" data-gdl-widget-container="true"
+	data-gdl-widget-url="https://files.klink.com/account/signup">
+	<div id="signup" class="clearfix" style='width:100%'>
+	<h2 id="social-mob-title" style="padding:15px;">SIGN UP USING</h2>
+	<table>
+	<tr>
+	<td> 	
+			<form id="signup-form" method="post"
+				action="https://files.klink.com/account/signup"
+				novalidate="novalidate">
+				<table style="padding: 10px;">
+				<tr> <td>
+				<div class="label">
+					<label>Name</label>
+				</div>
+				</td><td>
+				
+					<div class="text">
+						<div class="text">
+							<input id="last-name" class="required" type="text"
+								title="Last name" size="20" placeholder="Last name"
+								name="last_name">
+						</div>
+					</div>
+					</td><tr> <td>
+					<div class="clearfix names text label">
+						<label for="email">Email</label> 
+						</td><td>
+						<input id="email"
+							class="required email" type="text" size="20" name="email"
+							autocomplete="off">
+					</div>
+					</td></tr><tr></td><td>
+					<div class="clearfix password label">
+						<label id="errConfirmPass" for="password">Password</label> 
+					</td><td>
+						<input
+							id="password" class="required" type="password" size="20"
+							name="password">
+					</div>
+					</td></tr><tr><td>
+					</td> <td>
+					<div id="confirm_password">
+						<div class="clearfix password label"></div>
+						<div class="clearfix">
+							<label id="errPwdLength" class="error black">Your
+								password must be at least 6 characters</label>
+						</div>
+						</div>
+						</td></tr><tr> <td></td><td>
+						<div id="agreeTerms" class="clearfix checkboxCon">
+							<label></label> <input class="required" type="checkbox"
+								title="You must agree to terms and conditions" value="1"
+								name="terms"> <label> I agree to the <a
+								target="_blank" href="https://www.klink.com/content/terms-use">Terms
+									of Use</a>
+							</label>
+						</div>
+						</td></tr><tr><td> </td><td>
+						<div id="latestOffers" class="clearfix checkboxCon">
+							<label></label> <input type="checkbox" value="1"
+								name="keep_me_posted"> <label> Keep me updated
+								on the latest offers. </label>
+						</div>
+						</td></tr><tr><td></td><td>
+						<br><br>
+						<input type="hidden" value="SUBMIT" name="submit"> <input
+							id="rt" type="hidden" name="rt">
+						<div class="form-actions submit">
+							<input id="sign-up-button" class="fn-animateBtn disabled"
+								type="submit" value="SIGN UP NOW" disabled="disabled">
+						</div>
+						</td></tr></table>
+			</form>
+		</div></td>
+	<td> 
+			<div >
+				<div>
+				<table width='100%'>
+				<col width="150">
+				<tr>
+				<td><h2>OR LOGIN USING:</h2> </td></tr>
+				<td>
+					<a id="facebook" class="social-button embossed"
+					    style='width:200px;'
+						title="Signup with Facebook"
+						href="https://files.klink.com/account/sn/facebook/login"> <img
+						src="https://files.klink.com/account/static/images/facebook-icon.png">
+						<span class="connect_with">Connect with</span> Facebook
+					</a> 
+					</td></tr><tr><td>
+					<a id="twitter" class="social-button embossed even"
+						title="Signup with Twitter"
+						style='width:200px;'
+						href="https://files.klink.com/account/sn/twitter/login"> <img
+						src="https://files.klink.com/account/static/images/twitter-icon.png">
+						<span class="connect_with">Connect with</span> Twitter
+					</a> 
+					</td></tr><tr><td>
+					<a id="google" class="social-button embossed odd"
+						title="Signup with Google"
+						style='width:200px;'
+						href="https://files.klink.com/account/sn/google/login"> <img
+						src="https://files.klink.com/account/static/images/google-icon.png">
+						<span class="connect_with">Connect with</span> Google
+					</a> 
+					</td></tr><tr><td>
+					<a id="linkedin" class="social-button embossed even"
+						title="Signup with LinkedIn"
+						style='width:200px;'
+						href="https://files.klink.com/account/sn/linkedin/login"> <img
+						src="https://files.klink.com/account/static/images/linkedin-icon.png">
+						<span class="connect_with">Connect with</span> LinkedIn
+					</a>
+					</td></tr>
+				</table>	
+				</div></td>
+	</tr>
+	</table>
+	
+	</div>
+</div>
